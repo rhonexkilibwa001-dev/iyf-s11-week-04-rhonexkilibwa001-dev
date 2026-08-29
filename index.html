@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Fundamentals - Week 4</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .section h2 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #764ba2;
+        }
+        .output {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        input {
+            padding: 8px 12px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Week 4: JavaScript Fundamentals</h1>
+        
+        <div class="section">
+            <h2>📊 Calculator</h2>
+            <input type="number" id="num1" placeholder="First number">
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+                <option value="**">**</option>
+            </select>
+            <input type="number" id="num2" placeholder="Second number">
+            <button onclick="performCalculation()">Calculate</button>
+            <div id="calculatorOutput" class="output"></div>
+        </div>
+
+        <div class="section">
+            <h2>📚 Student Grade Tracker</h2>
+            <input type="text" id="studentName" placeholder="Student name">
+            <input type="number" id="mathGrade" placeholder="Math grade" max="100" min="0">
+            <input type="number" id="englishGrade" placeholder="English grade" max="100" min="0">
+            <input type="number" id="scienceGrade" placeholder="Science grade" max="100" min="0">
+            <button onclick="addStudentUI()">Add Student</button>
+            <button onclick="showAllReports()">Show All Reports</button>
+            <div id="gradeOutput" class="output"></div>
+        </div>
+
+        <div class="section">
+            <h2>🎮 Daily Challenges</h2>
+            <button onclick="runFizzBuzz()">FizzBuzz (1-100)</button>
+            <button onclick="runStringReverse()">Reverse String</button>
+            <button onclick="runLargestNumber()">Find Largest Number</button>
+            <button onclick="runRemoveDuplicates()">Remove Duplicates</button>
+            <button onclick="runPalindromeChecker()">Palindrome Checker</button>
+            <div id="challengeOutput" class="output"></div>
+        </div>
+
+        <div class="section">
+            <h2>📋 Lesson Tasks</h2>
+            <button onclick="runLessonTasks()">Run All Lesson Tasks</button>
+            <div id="lessonOutput" class="output"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
